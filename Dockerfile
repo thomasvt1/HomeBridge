@@ -8,7 +8,7 @@ MAINTAINER Thomas <thomasvt@me.com>
 RUN \
 	apt-get update && apt-get install -y libavahi-compat-libdnssd-dev g++ && \
 
-	pip3 install homebridge homebridge-homeassistant && \
+	npm install homebridge homebridge-homeassistant && \
 	apt-get clean
 	
 RUN mkdir /config
