@@ -1,12 +1,12 @@
 # Set the base image
-FROM python:3.6-alpine
+FROM python:3.6-slim
 
 # Dockerfile author / maintainer 
 MAINTAINER Thomas <thomasvt@me.com>
 
 # Update application repository list and install the Redis server. 
 RUN \
-	apk add --update linux-headers gcc build-base libffi-dev openssl-dev && \
+	apt-get install -y libavahi-compat-libdnssd-dev g++ && \
 
 	pip3 install homebridge homebridge-homeassistant
 	
