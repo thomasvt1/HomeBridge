@@ -10,6 +10,12 @@ RUN \
 
 	pip3 install -g homebridge homebridge-homeassistant
 	
+RUN mkdir /config
+COPY config.json /config/config.json
+#RUN ln -s /config/config.json /root/.homebridge/config.json
+
+VOLUME /config
+	
+	
 # Expose default port
 EXPOSE 5353 51826
-
