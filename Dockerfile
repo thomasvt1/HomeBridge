@@ -8,7 +8,7 @@ MAINTAINER Thomas <thomasvt@me.com>
 RUN \
 	apk add --update linux-headers gcc build-base libffi-dev openssl-dev && \
 
-	pip3 install -g homebridge homebridge-homeassistant
+	pip3 install homebridge homebridge-homeassistant
 	
 RUN mkdir /config
 COPY config.json /config/config.json
