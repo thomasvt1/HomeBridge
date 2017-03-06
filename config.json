@@ -1,0 +1,9 @@
+"platforms": [
+    {
+        "platform": "HomeAssistant",
+        "name": "HomeAssistant",
+        "host": "http://localhost:8123",
+        "password": "xxx",
+        "supported_types": ["light", "switch", "media_player", "scene"]
+    }
+]
