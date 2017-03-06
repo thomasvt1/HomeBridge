@@ -17,7 +17,7 @@ RUN apt-get clean
 RUN mkdir /config
 COPY config.json /config/config.json
 
-RUN mkdir /root/.homebridge && ln -s /config/config.json /root/.homebridge/config.json
+RUN mkdir /root/.homebridge/ && ln -s /config/config.json /root/.homebridge/config.json
 
 VOLUME /config
 	
