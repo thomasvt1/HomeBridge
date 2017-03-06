@@ -1,5 +1,5 @@
 # Set the base image
-FROM node:7
+FROM node:7-slim
 
 # Dockerfile author / maintainer 
 MAINTAINER Thomas <thomasvt@me.com>
