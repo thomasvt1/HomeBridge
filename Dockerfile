@@ -1,5 +1,5 @@
 # Set the base image
-FROM python:3.5
+FROM node:7
 
 # Dockerfile author / maintainer 
 MAINTAINER Thomas <thomasvt@me.com>
