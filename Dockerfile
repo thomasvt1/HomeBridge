@@ -31,4 +31,4 @@ VOLUME /config
 EXPOSE 5353 51826
 
 
-CMD ["homebridge"]
+CMD ["tail -f /var/log/homebridge.log"]
