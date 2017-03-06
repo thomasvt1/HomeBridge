@@ -1,5 +1,5 @@
 # Set the base image
-FROM python:3.5-slim
+FROM python:3.5
 
 # Dockerfile author / maintainer 
 MAINTAINER Thomas <thomasvt@me.com>
