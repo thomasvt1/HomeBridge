@@ -23,3 +23,6 @@ VOLUME /config
 	
 # Expose default port
 EXPOSE 5353 51826
+
+
+CMD ["homebridge"]
