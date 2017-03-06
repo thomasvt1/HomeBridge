@@ -5,11 +5,14 @@ FROM node:7
 MAINTAINER Thomas <thomasvt@me.com>
 
 # Update application repository list and install the Redis server. 
-RUN \
-	apt-get update && apt-get install -y libavahi-compat-libdnssd-dev g++ && \
+RUN apt-get update && apt-get install -y libavahi-compat-libdnssd-dev g++
 
-	npm install homebridge homebridge-homeassistant && \
-	apt-get clean
+RUN	npm install homebridge \
+	homebridge-homeassistant \
+	--unsafe-perm
+	
+	
+RUN apt-get clean
 	
 RUN mkdir /config
 COPY config.json /config/config.json
