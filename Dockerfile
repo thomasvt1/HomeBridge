@@ -1,5 +1,5 @@
 # Set the base image
-FROM node:7-slim
+FROM node:7
 
 # Dockerfile author / maintainer 
 MAINTAINER Thomas <thomasvt@me.com>
@@ -7,7 +7,7 @@ MAINTAINER Thomas <thomasvt@me.com>
 # Update application repository list and install the Redis server. 
 RUN apt-get update && apt-get install -y libavahi-compat-libdnssd-dev g++
 
-RUN	npm install homebridge \
+RUN	npm install -g homebridge \
 	homebridge-homeassistant \
 	--unsafe-perm
 	
@@ -16,7 +16,8 @@ RUN apt-get clean
 	
 RUN mkdir /config
 COPY config.json /config/config.json
-#RUN ln -s /config/config.json /root/.homebridge/config.json
+
+RUN ln -s /config/config.json /root/.homebridge/config.json
 
 VOLUME /config
 	
